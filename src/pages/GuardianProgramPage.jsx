@@ -20,49 +20,49 @@ const topTrust = [
   { icon: PawPrint, title: "Intelligent &", body: "Eager to Please" },
   { icon: Leaf, title: "Low to Non", body: "Shedding" },
   { icon: Heart, title: "Playful &", body: "Loving" },
-  { icon: ShieldCheck, title: "Healthy-Tested", body: "Parents" },
+  { icon: ShieldCheck, title: "Health-Tested", body: "Parents" },
   { icon: HouseLine, title: "Raised with", body: "Love" },
 ];
 
 const steps = [
   {
-    number: "1",
+    number: "01",
     icon: Stethoscope,
     title: "Health Testing & Evaluation",
     body: "We conduct thorough health testing to ensure our dogs meet breeding standards.",
   },
   {
-    number: "2",
+    number: "02",
     icon: CheckCircle,
     title: "If Not Approved",
     body: "If a dog does not pass testing, the guardianship ends. The dog is spayed/neutered and ownership transfers to the guardian.",
   },
   {
-    number: "3",
+    number: "03",
     icon: ClipboardText,
     title: "Guardian Contract",
     body: "All guardian placements are covered under a specific guardianship contract that outlines expectations and responsibilities.",
   },
   {
-    number: "4",
+    number: "04",
     icon: GenderFemale,
     title: "In Heat Notification",
     body: "Female guardians notify us when their girl comes into heat.",
   },
   {
-    number: "5",
+    number: "05",
     icon: HouseLine,
     title: "Return for Whelping",
     body: "Your dog returns to us about one week before her due date and stays until the puppies are weaned.",
   },
   {
-    number: "6",
+    number: "06",
     icon: PawPrint,
     title: "Visit & Stay Connected",
     body: "Guardian families are welcome to visit and stay connected while puppies are young.",
   },
   {
-    number: "7",
+    number: "07",
     icon: Heart,
     title: "Forever Family",
     body: "After retirement from our program, your dog remains yours — loved and cherished for life.",
@@ -98,14 +98,46 @@ const benefits = [
 ];
 
 const faqs = [
-  "What is a Guardian Home?",
-  "Do I pay for breeding or vet care?",
-  "What are my responsibilities as a Guardian?",
-  "Can we visit our dog while she is at the breeder?",
-  "How many litters will my dog have?",
-  "What happens after my dog retires?",
-  "What if I can no longer keep my guardian dog?",
-  "Is the Guardian Program right for our family?",
+  {
+    question: "What is a Guardian Home?",
+    answer:
+      "A Guardian Home is a loving family home for one of our breeding dogs. The dog lives with you as a family companion while remaining part of our breeding program for a limited time.",
+  },
+  {
+    question: "Do I pay for breeding or vet care?",
+    answer:
+      "Breeding-related care is handled by us. Guardian families are responsible for normal daily care, love, grooming, food, exercise, and communication.",
+  },
+  {
+    question: "What are my responsibilities as a Guardian?",
+    answer:
+      "You provide a safe, loving home, keep the dog healthy and socialized, communicate with us, and follow the guardian agreement.",
+  },
+  {
+    question: "Can we visit our dog while she is at the breeder?",
+    answer:
+      "Yes. We keep guardian families connected and informed while their dog is with us for whelping and puppy care.",
+  },
+  {
+    question: "How many litters will my dog have?",
+    answer:
+      "That depends on the dog, her health, and what is best for her. We always prioritize the dog’s wellbeing.",
+  },
+  {
+    question: "What happens after my dog retires?",
+    answer:
+      "After retirement, your dog remains with you permanently as your loved family companion.",
+  },
+  {
+    question: "What if I can no longer keep my guardian dog?",
+    answer:
+      "You should contact us immediately. Guardian placements are handled with care and responsibility under the agreement.",
+  },
+  {
+    question: "Is the Guardian Program right for our family?",
+    answer:
+      "It may be if you live nearby, communicate well, love dogs deeply, and want to be part of raising the next generation of Labradoodles.",
+  },
 ];
 
 const footerTrust = [
@@ -140,9 +172,9 @@ function PageHeader() {
       <div className="mx-auto flex h-[72px] max-w-[1360px] items-center justify-between px-5 md:px-8 lg:px-12">
         <a href="/" className="flex items-center gap-3">
           <img
-            src="/images/logo/logo.png"
+            src="/images/web-logo-2.png"
             alt="Labradoodles of Long Island"
-            className="h-12 w-12 rounded-full object-cover"
+            className="h-12 w-12 rounded-full object-contain"
           />
 
           <div className="leading-none">
@@ -161,8 +193,6 @@ function PageHeader() {
           <a href="/">Home</a>
           <a href="/available-puppies">Available Puppies</a>
           <a href="/our-dogs">Our Dogs</a>
-          <a href="/puppy-package">Puppy Package</a>
-          <a href="/testimonials">Testimonials</a>
           <a href="/about">About</a>
           <a href="/guardian-program" className="text-[#b8752b]">
             Guardian Program
@@ -198,24 +228,27 @@ function PageHeader() {
 function GuardianHero() {
   return (
     <section className="relative overflow-hidden border-b border-[#eadfce] bg-[#fbf6ee]">
-      <div className="mx-auto grid min-h-[520px] max-w-[1500px] lg:grid-cols-[0.48fr_0.52fr]">
+      <div className="absolute left-[-12rem] top-[-12rem] h-[34rem] w-[34rem] rounded-full bg-[#d9903c]/12 blur-3xl" />
+      <div className="absolute bottom-[-14rem] right-[-10rem] h-[34rem] w-[34rem] rounded-full bg-[#6f805f]/14 blur-3xl" />
+
+      <div className="relative mx-auto grid min-h-[570px] max-w-[1500px] lg:grid-cols-[0.48fr_0.52fr]">
         <div className="relative z-10 flex flex-col justify-center px-6 py-16 md:px-12 lg:pl-20">
-          <p className="mb-5 text-[13px] font-black uppercase tracking-[0.22em] text-[#89705c]">
-            Guardian Program{" "}
-            <span className="font-editorial text-[#b8752b]">♡</span>
+          <p className="mb-5 flex items-center gap-3 text-[11px] font-black uppercase tracking-[0.32em] text-[#89705c]">
+            Guardian Program
+            <span className="h-px w-10 bg-[#b8752b]" />
           </p>
 
-          <h1 className="max-w-[620px] text-[4.25rem] font-semibold leading-[0.9] tracking-[-0.065em] text-[#1f2528] md:text-[5.45rem]">
-            A Partnership
+          <h1 className="max-w-[680px] text-[4.1rem] font-semibold leading-[0.9] tracking-[-0.07em] text-[#1f2528] md:text-[5.55rem]">
+            A partnership
             <br />
             <span className="font-editorial italic text-[#b8752b]">
-              Built on Love
+              built on love
             </span>
             <br />
-            for Generations
+            for generations.
           </h1>
 
-          <p className="mt-7 max-w-[500px] text-[17px] font-semibold leading-8 text-[#4f5b60]">
+          <p className="mt-7 max-w-[520px] text-[17px] font-semibold leading-8 text-[#4f5b60]">
             Our Guardian Program allows select Australian Labradoodles to live
             in loving homes while helping us continue our commitment to health,
             temperament, and excellence.
@@ -240,23 +273,24 @@ function GuardianHero() {
           </div>
         </div>
 
-        <div className="relative min-h-[420px]">
+        <div className="relative min-h-[430px]">
           <img
-            src="/images/heros/guardian-program.jpg"
+            src="/images/guardian-program.jpg"
             alt="Guardian family with Australian Labradoodle"
             className="absolute inset-0 h-full w-full object-cover"
           />
 
           <div className="absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-[#fbf6ee] to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#1f2528]/35 via-transparent to-transparent" />
 
-          <button className="absolute right-8 top-1/2 grid h-14 w-14 -translate-y-1/2 place-items-center rounded-full border border-[#d4b58d] bg-white/85 text-[#b8752b] shadow-lg">
-            <ArrowRight size={24} weight="bold" />
-          </button>
-
-          <div className="absolute bottom-7 left-1/2 flex -translate-x-1/2 gap-2">
-            <span className="h-3 w-3 rounded-full bg-[#b8752b]" />
-            <span className="h-3 w-3 rounded-full bg-white" />
-            <span className="h-3 w-3 rounded-full bg-white" />
+          <div className="absolute bottom-7 left-7 right-7 rounded-[26px] border border-white/30 bg-[#fffaf3]/88 p-5 shadow-2xl backdrop-blur-md md:left-auto md:max-w-[370px]">
+            <p className="text-[10px] font-black uppercase tracking-[0.24em] text-[#9a6a3a]">
+              Loved as family
+            </p>
+            <p className="mt-2 text-[14px] font-semibold leading-6 text-[#4f5b60]">
+              Guardian dogs live real family lives first — loved, known, and
+              cared for every day.
+            </p>
           </div>
         </div>
       </div>
@@ -300,9 +334,13 @@ function TopTrustStrip() {
 function ProgramIntro() {
   return (
     <section className="px-5 pb-10 md:px-8 lg:px-12">
-      <div className="mx-auto grid max-w-[1280px] gap-8 rounded-[22px] border border-[#e6dac8] bg-[#fffaf3] p-8 shadow-sm lg:grid-cols-[0.95fr_1.05fr]">
-        <article className="flex flex-col justify-center">
-          <h2 className="font-editorial text-[42px] font-semibold leading-none tracking-[-0.03em] text-[#1f2528]">
+      <div className="mx-auto grid max-w-[1280px] gap-8 rounded-[30px] border border-[#e6dac8] bg-[#fffaf3] p-6 shadow-sm md:p-8 lg:grid-cols-[0.95fr_1.05fr]">
+        <article className="flex flex-col justify-center rounded-[24px] bg-white p-7 md:p-8">
+          <p className="text-[11px] font-black uppercase tracking-[0.3em] text-[#9a6a3a]">
+            The heart of the program
+          </p>
+
+          <h2 className="mt-4 font-editorial text-[46px] font-semibold leading-none tracking-[-0.04em] text-[#1f2528]">
             Our Guardian Program{" "}
             <span className="font-editorial italic text-[#b8752b]">♡</span>
           </h2>
@@ -318,23 +356,25 @@ function ProgramIntro() {
             <p>
               As a Guardian Family, you provide a safe, happy home for one of
               our future parents. In return, we provide all breeding-related
-              care, support, and communication, and once your dog retires from
-              our program, they remain yours — forever.
+              care, support, and communication. Once your dog retires from our
+              program, they remain yours — forever.
             </p>
           </div>
         </article>
 
-        <div className="relative min-h-[320px] overflow-hidden rounded-[999px] border border-[#e6dac8] bg-[#eadbc6] shadow-sm">
+        <div className="relative min-h-[350px] overflow-hidden rounded-[999px] border border-[#e6dac8] bg-[#eadbc6] shadow-sm">
           <img
-            src="/images/guardian/sleeping-dog.jpg"
+            src="/images/sleeping-dog.jpeg"
             alt="Sleeping Australian Labradoodle"
             className="absolute inset-0 h-full w-full object-cover"
           />
 
+          <div className="absolute inset-0 bg-gradient-to-t from-[#1f2528]/28 via-transparent to-transparent" />
+
           <Heart
-            size={78}
+            size={88}
             weight="regular"
-            className="absolute bottom-6 right-8 text-[#b8752b]"
+            className="absolute bottom-7 right-10 text-[#b8752b]"
           />
         </div>
       </div>
@@ -344,40 +384,59 @@ function ProgramIntro() {
 
 function HowItWorks() {
   return (
-    <section className="px-5 pb-10 md:px-8 lg:px-12">
-      <div className="mx-auto max-w-[1280px] rounded-[22px] border border-[#e6dac8] bg-[#fffaf3] p-8 shadow-sm">
-        <h2 className="text-center font-editorial text-[38px] font-semibold leading-none tracking-[-0.03em] text-[#1f2528]">
-          How Our Guardian Program Works{" "}
-          <span className="font-editorial italic text-[#b8752b]">♡</span>
-        </h2>
+    <section className="relative overflow-hidden px-5 pb-10 md:px-8 lg:px-12">
+      <div className="absolute left-[-12rem] top-10 h-[28rem] w-[28rem] rounded-full bg-[#6f805f]/12 blur-3xl" />
 
-        <div className="mt-9 grid gap-0 overflow-hidden rounded-[18px] border border-[#e6dac8] bg-white md:grid-cols-2 lg:grid-cols-7">
-          {steps.map((step) => {
-            const Icon = step.icon;
+      <div className="relative mx-auto max-w-[1280px] rounded-[30px] border border-[#e6dac8] bg-[#fffaf3] p-6 shadow-sm md:p-8">
+        <div className="mx-auto max-w-[780px] text-center">
+          <p className="text-[11px] font-black uppercase tracking-[0.3em] text-[#9a6a3a]">
+            The process
+          </p>
 
-            return (
-              <article
-                key={step.number}
-                className="relative min-h-[300px] border-b border-r border-[#e6dac8] p-5 text-center last:border-r-0 lg:border-b-0"
-              >
-                <div className="absolute left-1/2 top-0 grid h-10 w-10 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full bg-[#c97927] text-[15px] font-black text-white shadow-md">
-                  {step.number}
-                </div>
+          <h2 className="mt-4 font-editorial text-[42px] font-semibold leading-none tracking-[-0.04em] text-[#1f2528]">
+            How Our Guardian Program Works{" "}
+            <span className="font-editorial italic text-[#b8752b]">♡</span>
+          </h2>
 
-                <div className="mt-7 flex h-16 items-center justify-center">
-                  <Icon size={48} weight="duotone" className="text-[#6f805f]" />
-                </div>
+          <p className="mt-4 text-[15px] leading-7 text-[#58656b]">
+            Clear expectations, thoughtful care, and a partnership built around
+            the wellbeing of the dog.
+          </p>
+        </div>
 
-                <h3 className="mt-5 text-[15px] font-black leading-5 text-[#2f2925]">
-                  {step.title}
-                </h3>
+        <div className="mt-9 overflow-x-auto pb-2">
+          <div className="grid min-w-[1180px] grid-cols-7 gap-0 overflow-hidden rounded-[22px] border border-[#e6dac8] bg-white">
+            {steps.map((step) => {
+              const Icon = step.icon;
 
-                <p className="mt-3 text-[12px] font-semibold leading-5 text-[#64696b]">
-                  {step.body}
-                </p>
-              </article>
-            );
-          })}
+              return (
+                <article
+                  key={step.number}
+                  className="relative min-h-[315px] border-r border-[#e6dac8] p-5 text-center last:border-r-0"
+                >
+                  <div className="absolute left-1/2 top-0 grid h-11 w-11 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full bg-gradient-to-b from-[#d9903c] to-[#a95f1f] text-[12px] font-black text-white shadow-lg shadow-[#b8752b]/20">
+                    {step.number}
+                  </div>
+
+                  <div className="mt-8 flex h-16 items-center justify-center">
+                    <Icon
+                      size={48}
+                      weight="duotone"
+                      className="text-[#6f805f]"
+                    />
+                  </div>
+
+                  <h3 className="mt-5 text-[15px] font-black leading-5 text-[#2f2925]">
+                    {step.title}
+                  </h3>
+
+                  <p className="mt-3 text-[12px] font-semibold leading-5 text-[#64696b]">
+                    {step.body}
+                  </p>
+                </article>
+              );
+            })}
+          </div>
         </div>
       </div>
     </section>
@@ -387,11 +446,23 @@ function HowItWorks() {
 function BenefitsSection() {
   return (
     <section className="px-5 pb-10 md:px-8 lg:px-12">
-      <div className="mx-auto max-w-[1280px] rounded-[22px] border border-[#e6dac8] bg-[#fffaf3] p-8 shadow-sm">
-        <h2 className="text-center font-editorial text-[38px] font-semibold leading-none tracking-[-0.03em] text-[#1f2528]">
-          Benefits of Our Guardian Program{" "}
-          <span className="font-editorial italic text-[#b8752b]">♡</span>
-        </h2>
+      <div className="mx-auto max-w-[1280px] rounded-[30px] border border-[#e6dac8] bg-[#fffaf3] p-6 shadow-sm md:p-8">
+        <div className="grid gap-7 lg:grid-cols-[0.72fr_1.28fr] lg:items-end">
+          <div>
+            <p className="text-[11px] font-black uppercase tracking-[0.3em] text-[#9a6a3a]">
+              Benefits
+            </p>
+            <h2 className="mt-4 font-editorial text-[42px] font-semibold leading-none tracking-[-0.04em] text-[#1f2528]">
+              Why families become guardians{" "}
+              <span className="font-editorial italic text-[#b8752b]">♡</span>
+            </h2>
+          </div>
+
+          <p className="max-w-[570px] text-[15px] leading-7 text-[#58656b] lg:justify-self-end">
+            A guardian home gives a special dog the life they deserve while
+            helping us continue a responsible, home-centered breeding program.
+          </p>
+        </div>
 
         <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-6">
           {benefits.map((item) => {
@@ -400,9 +471,9 @@ function BenefitsSection() {
             return (
               <article
                 key={item.title}
-                className="min-h-[175px] rounded-[16px] border border-[#e6dac8] bg-white p-5 text-center shadow-sm"
+                className="group min-h-[185px] rounded-[22px] border border-[#e6dac8] bg-white p-5 text-center shadow-sm transition duration-500 hover:-translate-y-1 hover:shadow-xl hover:shadow-[#8a5d37]/10"
               >
-                <div className="mx-auto grid h-14 w-14 place-items-center rounded-full bg-[#fbf6ee] text-[#6f805f]">
+                <div className="mx-auto grid h-14 w-14 place-items-center rounded-full bg-[#fbf6ee] text-[#6f805f] transition duration-500 group-hover:bg-[#6f805f] group-hover:text-white">
                   <Icon size={32} weight="duotone" />
                 </div>
 
@@ -421,31 +492,35 @@ function BenefitsSection() {
 function FaqSection() {
   return (
     <section id="guardian-faq" className="px-5 pb-10 md:px-8 lg:px-12">
-      <div className="mx-auto max-w-[1280px] rounded-[22px] border border-[#e6dac8] bg-[#fffaf3] p-8 shadow-sm">
-        <h2 className="text-center font-editorial text-[38px] font-semibold leading-none tracking-[-0.03em] text-[#1f2528]">
-          Frequently Asked Questions{" "}
-          <span className="font-editorial italic text-[#b8752b]">♡</span>
-        </h2>
+      <div className="mx-auto max-w-[1280px] rounded-[30px] border border-[#e6dac8] bg-[#fffaf3] p-6 shadow-sm md:p-8">
+        <div className="mx-auto max-w-[780px] text-center">
+          <p className="text-[11px] font-black uppercase tracking-[0.3em] text-[#9a6a3a]">
+            FAQ
+          </p>
+
+          <h2 className="mt-4 font-editorial text-[42px] font-semibold leading-none tracking-[-0.04em] text-[#1f2528]">
+            Frequently Asked Questions{" "}
+            <span className="font-editorial italic text-[#b8752b]">♡</span>
+          </h2>
+        </div>
 
         <div className="mt-8 grid gap-4 lg:grid-cols-2">
           {faqs.map((faq) => (
             <details
-              key={faq}
-              className="group rounded-[14px] border border-[#e6dac8] bg-white px-5 py-4 shadow-sm"
+              key={faq.question}
+              className="group rounded-[18px] border border-[#e6dac8] bg-white px-5 py-5 shadow-sm"
             >
               <summary className="flex cursor-pointer list-none items-center justify-between gap-4">
                 <span className="text-[15px] font-black text-[#2f2925]">
-                  {faq}
+                  {faq.question}
                 </span>
-                <span className="text-[22px] font-light text-[#6f6a63] group-open:rotate-45">
+                <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-[#f7efe4] text-[22px] font-light text-[#6f6a63] transition group-open:rotate-45">
                   +
                 </span>
               </summary>
 
-              <p className="mt-3 text-[14px] leading-6 text-[#62686a]">
-                We’ll review the details with you personally so you understand
-                expectations, support, timing, and whether the program is the
-                right fit for your family.
+              <p className="mt-4 text-[14px] leading-7 text-[#62686a]">
+                {faq.answer}
               </p>
             </details>
           ))}
@@ -458,8 +533,8 @@ function FaqSection() {
 function BottomImpactCTA() {
   return (
     <section className="px-5 pb-0 md:px-8 lg:px-12">
-      <div className="mx-auto grid max-w-[1280px] overflow-hidden rounded-t-[22px] border border-b-0 border-[#e1d3c1] bg-[#fbf6ee] md:grid-cols-[0.32fr_0.42fr_0.26fr]">
-        <div className="relative min-h-[230px]">
+      <div className="mx-auto grid max-w-[1280px] overflow-hidden rounded-t-[30px] border border-b-0 border-[#e1d3c1] bg-[#fffaf3] md:grid-cols-[0.36fr_0.42fr_0.22fr]">
+        <div className="relative min-h-[280px] bg-[#eadbc6]">
           <img
             src="/images/guardian/cta-dog.png"
             alt="Australian Labradoodle"
@@ -468,10 +543,14 @@ function BottomImpactCTA() {
         </div>
 
         <div className="flex flex-col justify-center p-8 md:p-10">
-          <h2 className="font-editorial text-[42px] font-semibold leading-[1] tracking-[-0.035em] text-[#1f2528]">
-            Ready to Make a
+          <p className="text-[11px] font-black uppercase tracking-[0.3em] text-[#9a6a3a]">
+            Guardian Homes
+          </p>
+
+          <h2 className="mt-4 font-editorial text-[46px] font-semibold leading-[1] tracking-[-0.04em] text-[#1f2528]">
+            Ready to make a
             <br />
-            Lasting Impact?{" "}
+            lasting impact?{" "}
             <span className="font-editorial italic text-[#b8752b]">♡</span>
           </h2>
 
@@ -539,9 +618,9 @@ function PageFooter() {
       <div className="mx-auto grid max-w-[1280px] gap-8 border-t border-white/18 pt-7 md:grid-cols-[1.1fr_1fr_1fr] md:items-center">
         <div className="flex items-center gap-4">
           <img
-            src="/images/logo/logo.png"
+            src="/images/web-logo-2.png"
             alt="Labradoodles of Long Island"
-            className="h-12 w-12 rounded-full object-cover"
+            className="h-12 w-12 rounded-full object-contain"
           />
 
           <div>

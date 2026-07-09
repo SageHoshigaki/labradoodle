@@ -16,14 +16,14 @@ const previewLitters = [
   {
     parents: "Zelda & Elvis",
     size: "Mini",
-    image: "/images/zeldas_puppies_side_by_side.png",
+    image: "/images/zelda.png",
     due: "June 2026",
     home: "August 2026",
   },
   {
     parents: "Meadow & Theo",
     size: "Mini",
-    image: "/images/red_doodles_side_by_side.png",
+    image: "/images/meadow.png",
     due: "August 2026",
     home: "October 2026",
   },

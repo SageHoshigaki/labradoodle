@@ -10,7 +10,7 @@ const dogCards = [
   {
     label: "Meet the Mommies",
     href: "/our-dogs#mommies",
-    image: "/images/dogs/zelda.jpg",
+    image: "/images/her.png",
     icon: GenderFemale,
     title: "Mommies raised with love.",
     body: "Our girls are chosen for health, temperament, coat, and the kind of softness families feel immediately.",
@@ -18,7 +18,7 @@ const dogCards = [
   {
     label: "Meet the Daddies",
     href: "/our-dogs#daddies",
-    image: "/images/dogs/zeus.jpg",
+    image: "/images/goose.png",
     icon: GenderMale,
     title: "Daddies with heart.",
     body: "Our boys bring structure, confidence, sweetness, and the family-ready traits we want to see carried forward.",

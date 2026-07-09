@@ -78,17 +78,6 @@ const litters = [
     note: "A beautiful fall homecoming window for families preparing for a new best friend.",
     sold: false,
   },
-  {
-    parents: "Dakota & Harry",
-    size: "Mini",
-    image: "/images/litters/dakota-harry.jpg",
-    status: "All Puppies Sold",
-    eyebrow: "Past Litter",
-    due: "Born April 9, 2026",
-    home: "June 2026",
-    note: "This litter has already found their families, but you can view similar upcoming pairings.",
-    sold: true,
-  },
 ];
 
 const packageItems = [
