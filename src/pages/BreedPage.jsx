@@ -12,6 +12,7 @@ import {
   Phone,
   UsersThree,
 } from "@phosphor-icons/react";
+import Navbar from "../components/Navbar";
 
 const breedTraits = [
   "Known for charisma, sociability, and a joyful personality",
@@ -90,7 +91,7 @@ const trustStrip = [
 function BreedPage() {
   return (
     <main className="min-h-screen bg-[#f7efe4] text-[#241915]">
-      <PageHeader />
+      <Navbar />
       <BreedHero />
       <BreedOrigin />
       <SizeSection />

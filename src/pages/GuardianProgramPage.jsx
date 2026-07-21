@@ -15,6 +15,7 @@ import {
   Sparkle,
   Stethoscope,
 } from "@phosphor-icons/react";
+import Navbar from "../components/Navbar";
 
 const topTrust = [
   { icon: PawPrint, title: "Intelligent &", body: "Eager to Please" },
@@ -150,7 +151,7 @@ const footerTrust = [
 function GuardianProgramPage() {
   return (
     <main className="min-h-screen bg-[#f7efe4] text-[#241915]">
-      <PageHeader />
+      <Navbar />
       <GuardianHero />
       <TopTrustStrip />
       <ProgramIntro />

@@ -11,6 +11,7 @@ import {
   Sparkle,
   UsersThree,
 } from "@phosphor-icons/react";
+import Navbar from "../components/Navbar";
 
 const processSteps = [
   {
@@ -51,7 +52,7 @@ const preferences = [
 export default function PuppyApplicationPage() {
   return (
     <main className="min-h-screen bg-[#f6ead8] text-[#251811]">
-      <PageHeader />
+      <Navbar />
 
       <section className="relative overflow-hidden px-5 pb-14 pt-24 md:px-10 lg:px-14">
         <div className="paper-noise absolute inset-0 opacity-[0.12]" />

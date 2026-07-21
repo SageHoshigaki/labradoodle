@@ -11,6 +11,7 @@ import {
   ShieldCheck,
   Sparkle,
 } from "@phosphor-icons/react";
+import Navbar from "../components/Navbar";
 
 const sizes = [
   {
@@ -137,7 +138,7 @@ const trustPackage = [
 export default function AvailablePuppiesPage() {
   return (
     <main className="min-h-screen bg-[#f7efe4] text-[#241915]">
-      <PageHeader />
+      <Navbar />
       <AvailableHero />
       <SizeGuide />
       <CurrentLitters />
